@@ -13,7 +13,7 @@
     --khaki-dk: #DFD4BC;
     --red:      #A32A22;
     --ink:      #1E241F;
-    --gray:     #5C6660;
+    --gray:     #55605A;
   }
 
   * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -22,14 +22,14 @@
     margin: 0;
     font-family: "DejaVu Sans", "FreeSans", sans-serif;
     color: var(--ink);
-    font-size: 10.5pt;
-    line-height: 1.5;
+    font-size: 15.5pt;
+    line-height: 1.52;
   }
 
   .page {
     width: 8.5in;
     height: 11in;
-    padding: 0.62in 0.72in 0.5in 0.72in;
+    padding: 0.6in 0.68in 0.5in 0.68in;
     position: relative;
     overflow: hidden;
     page-break-after: always;
@@ -48,20 +48,19 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 2.5px solid var(--olive);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+    border-bottom: 3px solid var(--olive);
+    padding-bottom: 6px;
+    margin-bottom: 24px;
     flex: none;
   }
   .runhead .rh-title {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 13.5pt;
+    font-size: 18.5pt;
     font-weight: bold;
     color: var(--olive);
-    letter-spacing: .1px;
   }
   .runhead .rh-tag {
-    font-size: 7.6pt;
+    font-size: 9.5pt;
     letter-spacing: 1.4px;
     text-transform: uppercase;
     color: var(--gray);
@@ -69,158 +68,136 @@
 
   .foot {
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 12px;
     border-top: 1px solid var(--khaki-dk);
     display: flex;
     justify-content: space-between;
-    font-size: 7.6pt;
+    font-size: 9.5pt;
     letter-spacing: .7px;
     text-transform: uppercase;
     color: var(--gray);
     flex: none;
   }
 
-  /* ---------- page 1 cover ---------- */
+  /* ---------- cover ---------- */
   .cover { padding: 0; }
   .cover-band {
     background: var(--olive);
     color: #fff;
-    padding: 1.05in 0.72in 0.85in 0.72in;
+    padding: 0.95in 0.68in 0.78in 0.68in;
     flex: none;
   }
   .cover-eyebrow {
-    font-size: 8.4pt;
-    letter-spacing: 3.2px;
+    font-size: 11pt;
+    letter-spacing: 3.4px;
     text-transform: uppercase;
     color: #C9D8C1;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
   }
-  .cover-band h1 {
-    font-size: 40pt;
-    line-height: 1.02;
-    letter-spacing: -.5px;
-  }
+  .cover-band h1 { font-size: 54pt; line-height: 1.02; letter-spacing: -.5px; }
   .cover-band .sub {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 17.5pt;
+    font-size: 24pt;
     color: #E6EFE0;
-    margin-top: 9px;
+    margin-top: 12px;
     font-style: italic;
   }
-  .cover-rule {
-    height: 7px;
-    background: var(--red);
-  }
+  .cover-rule { height: 9px; background: var(--red); }
   .cover-body {
-    padding: 0.42in 0.72in 0.5in 0.72in;
+    padding: 0.5in 0.68in 0.55in 0.68in;
     flex: 1;
     display: flex;
     flex-direction: column;
   }
 
-  .lede { font-size: 11.4pt; line-height: 1.62; }
-  .lede p { margin: 0 0 11px 0; }
+  .lede { font-size: 17pt; line-height: 1.6; }
+  .lede p { margin: 0 0 15px 0; }
   .lede strong { color: var(--olive); }
 
   .fillins {
-    display: flex;
-    gap: 26px;
     margin-top: auto;
-    padding-top: 13px;
+    padding-top: 18px;
     border-top: 1px solid var(--khaki-dk);
-    font-size: 9pt;
+    font-size: 13.5pt;
     color: var(--gray);
-    letter-spacing: .4px;
+    line-height: 2.1;
   }
-  .fillins span { white-space: nowrap; }
   .fillins b { color: var(--ink); font-weight: normal; }
 
   /* ---------- section headings ---------- */
   .kicker {
-    font-size: 8pt;
-    letter-spacing: 2.6px;
+    font-size: 10pt;
+    letter-spacing: 2.8px;
     text-transform: uppercase;
     color: var(--red);
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
-  h2.sect {
-    font-size: 21pt;
-    color: var(--olive);
-    line-height: 1.1;
-    margin-bottom: 4px;
-  }
-  .sect-note { font-size: 9.6pt; color: var(--gray); margin: 4px 0 16px 0; }
+  h2.sect { font-size: 30pt; color: var(--olive); line-height: 1.08; margin-bottom: 5px; }
+  h2.sect.sm { font-size: 25pt; }
+  .sect-note { font-size: 14pt; color: var(--gray); margin: 6px 0 15px 0; line-height: 1.5; }
 
-  /* ---------- five-step flow (page 1) ---------- */
-  .flowwrap { margin-top: 26px; }
-  .flow { display: flex; gap: 6px; }
-  .step-chev {
-    flex: 1;
+  /* ---------- five steps at a glance ---------- */
+  .glance { display: flex; flex-direction: column; gap: 8px; }
+  .grow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     background: var(--khaki);
-    border-top: 4px solid var(--olive);
-    padding: 11px 9px 12px 9px;
-    position: relative;
+    border-left: 7px solid var(--olive);
+    padding: 11px 20px;
   }
-  .step-chev .n {
+  .grow .gn {
+    flex: none;
+    width: 52px;
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 25pt;
+    font-size: 36pt;
     font-weight: bold;
     color: var(--olive);
     line-height: 1;
+    text-align: center;
   }
-  .step-chev .nm {
+  .grow .gt {
+    flex: none;
+    width: 190px;
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 12.5pt;
+    font-size: 21pt;
     font-weight: bold;
-    margin: 4px 0 5px 0;
     color: var(--ink);
   }
-  .step-chev .cap { font-size: 8.6pt; line-height: 1.36; color: var(--gray); }
-  .arrow {
-    align-self: center;
-    color: var(--khaki-dk);
-    font-size: 15pt;
-    line-height: 1;
-    flex: none;
-  }
+  .grow .gc { flex: 1; font-size: 14.5pt; line-height: 1.42; color: var(--gray); }
 
   /* ---------- callout ---------- */
   .callout {
     background: var(--khaki);
-    border-left: 5px solid var(--red);
-    padding: 13px 16px;
-    margin-top: 20px;
-    font-size: 10.2pt;
+    border-left: 7px solid var(--red);
+    padding: 20px 24px;
+    margin-top: 15px;
+    font-size: 15.5pt;
     line-height: 1.55;
   }
   .callout .ct {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
     font-weight: bold;
-    font-size: 11.5pt;
+    font-size: 18pt;
     color: var(--red);
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
   }
 
-  /* ---------- step detail blocks (page 2) ---------- */
-  .step {
-    display: flex;
-    gap: 15px;
-    padding: 11px 0 12px 0;
-    border-bottom: 1px solid var(--khaki-dk);
-    break-inside: avoid;
-  }
-  .step:last-of-type { border-bottom: none; }
+  /* ---------- step blocks ---------- */
+  .step { display: flex; gap: 20px; padding: 6px 0 20px 0; }
+  .step.last { padding-bottom: 0; }
+  .step + .step { border-top: 1px solid var(--khaki-dk); padding-top: 24px; }
   .badge {
     flex: none;
-    width: 40px;
-    height: 40px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     background: var(--olive);
     color: #fff;
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 19pt;
+    font-size: 26pt;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -228,60 +205,57 @@
     line-height: 1;
   }
   .step-body { flex: 1; }
-  .step-body h3 {
-    font-size: 14pt;
-    color: var(--olive);
-    margin-bottom: 3px;
-  }
-  .step-body p { margin: 0 0 6px 0; font-size: 10pt; line-height: 1.48; }
+  .step-body h3 { font-size: 21pt; color: var(--olive); margin-bottom: 7px; }
+  .step-body p { margin: 0 0 12px 0; font-size: 15.5pt; line-height: 1.5; }
   .step-body p:last-child { margin-bottom: 0; }
 
   .say {
     background: #fff;
-    border: 1.5px solid var(--olive-lt);
-    border-radius: 3px;
-    padding: 7px 11px;
-    margin: 7px 0;
+    border: 2px solid var(--olive-lt);
+    border-radius: 4px;
+    padding: 11px 16px 12px 16px;
+    margin: 12px 0;
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 11pt;
+    font-size: 17pt;
+    line-height: 1.36;
     color: var(--olive);
     font-weight: bold;
   }
   .say .lbl {
     display: block;
     font-family: "DejaVu Sans", sans-serif;
-    font-size: 7pt;
-    letter-spacing: 1.6px;
+    font-size: 9pt;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
     color: var(--gray);
     font-weight: normal;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
-  .tick { margin: 5px 0 6px 0; padding-left: 17px; }
-  .tick li { font-size: 9.7pt; margin-bottom: 2px; line-height: 1.4; }
+  .tick { margin: 10px 0 12px 0; padding-left: 24px; }
+  .tick li { font-size: 15.5pt; margin-bottom: 6px; line-height: 1.45; }
   .pull {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 11pt;
+    font-size: 17pt;
     color: var(--red);
     font-weight: bold;
     line-height: 1.35;
   }
 
-  /* ---------- example dialogue ---------- */
-  .dialog { margin-top: 4px; }
+  /* ---------- dialogue ---------- */
+  .dialog { margin-top: 6px; }
   .dl {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     align-items: baseline;
-    padding: 4.5px 0;
+    padding: 9px 0;
     border-bottom: 1px solid #EFEADE;
   }
   .dl:last-child { border-bottom: none; }
   .dl .who {
     flex: none;
-    width: 62px;
-    font-size: 7.8pt;
-    letter-spacing: 1.2px;
+    width: 88px;
+    font-size: 11pt;
+    letter-spacing: 1.3px;
     text-transform: uppercase;
     color: var(--olive-lt);
     text-align: right;
@@ -289,17 +263,17 @@
   .dl .says {
     flex: 1;
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 10.6pt;
+    font-size: 15.5pt;
     line-height: 1.38;
   }
   .dl .mark {
     flex: none;
-    width: 17px;
-    height: 17px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: var(--khaki-dk);
     color: var(--olive);
-    font-size: 8pt;
+    font-size: 11pt;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -309,42 +283,37 @@
 
   /* ---------- script card ---------- */
   .cardframe {
-    border: 3px solid var(--olive);
-    padding: 0;
+    border: 4px solid var(--olive);
     flex: 1;
     display: flex;
     flex-direction: column;
   }
-  .cardframe .cf-head {
-    background: var(--olive);
-    color: #fff;
-    padding: 10px 18px 11px 18px;
-  }
+  .cardframe .cf-head { background: var(--olive); color: #fff; padding: 14px 22px 15px 22px; }
   .cardframe .cf-head .t {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 17pt;
+    font-size: 23pt;
     font-weight: bold;
   }
-  .cardframe .cf-head .s { font-size: 8.6pt; color: #C9D8C1; letter-spacing: .5px; margin-top: 1px; }
+  .cardframe .cf-head .s { font-size: 12.5pt; color: #C9D8C1; margin-top: 3px; line-height: 1.4; }
   .cardframe .cf-body {
-    padding: 20px 18px 22px 18px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
   }
 
-  .line { display: flex; gap: 12px; align-items: flex-start; }
+  .line { display: flex; gap: 16px; align-items: flex-start; }
   .line .ln {
     flex: none;
-    width: 27px;
-    height: 27px;
-    border: 2px solid var(--red);
+    width: 36px;
+    height: 36px;
+    border: 2.5px solid var(--red);
     border-radius: 50%;
     color: var(--red);
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
     font-weight: bold;
-    font-size: 13.5pt;
+    font-size: 18pt;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,162 +321,95 @@
   }
   .line .lc { flex: 1; }
   .line .lname {
-    font-size: 7.6pt;
+    font-size: 9.5pt;
     letter-spacing: 1.8px;
     text-transform: uppercase;
     color: var(--gray);
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
   .line .quote {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 12.6pt;
-    line-height: 1.42;
+    font-size: 19pt;
+    line-height: 1.4;
     color: var(--ink);
     font-weight: bold;
   }
-  .line .stage {
-    font-size: 8.8pt;
-    color: var(--gray);
-    font-style: italic;
-    margin-top: 3px;
-    line-height: 1.4;
-  }
-  .blank { border-bottom: 1.5px solid var(--khaki-dk); display: inline-block; min-width: 130px; }
-  .blank-s { min-width: 42px; }
+  .line .stage { font-size: 13pt; color: var(--gray); font-style: italic; margin-top: 6px; line-height: 1.42; }
+  .blank { border-bottom: 2px solid var(--khaki-dk); display: inline-block; min-width: 165px; }
+  .blank-s { min-width: 55px; }
 
-  /* ---------- two column (page 4) ---------- */
-  .cols { display: flex; gap: 20px; }
-  .col-l { width: 40%; }
-  .col-r { flex: 1; }
-
-  .jobcard {
-    background: var(--khaki);
-    padding: 11px 14px 12px 14px;
-    margin-bottom: 10px;
-  }
-  .jobcard h4 {
-    font-size: 11.6pt;
-    color: var(--olive);
-    margin-bottom: 3px;
-  }
-  .jobcard p { margin: 0; font-size: 9.5pt; line-height: 1.44; }
+  /* ---------- chair rules ---------- */
+  .jobcard { background: var(--khaki); padding: 17px 20px 18px 20px; margin-bottom: 16px; }
+  .jobcard h4 { font-size: 19pt; color: var(--olive); margin-bottom: 5px; }
+  .jobcard p { margin: 0; font-size: 15pt; line-height: 1.48; }
   .jobcard .num {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
     color: var(--red);
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 9px;
   }
 
-  .sit {
-    border-left: 4px solid var(--olive-lt);
-    padding: 0 0 0 12px;
-    margin-bottom: 11px;
-  }
-  .sit h4 { font-size: 11.4pt; color: var(--ink); margin-bottom: 3px; }
-  .sit p { margin: 0; font-size: 9.6pt; line-height: 1.46; }
-  .sit .q {
-    color: var(--olive);
-    font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-weight: bold;
-  }
+  /* ---------- situations ---------- */
+  .sit { border-left: 5px solid var(--olive-lt); padding-left: 17px; margin-bottom: 22px; }
+  .sit:last-child { margin-bottom: 0; }
+  .sit h4 { font-size: 18.5pt; color: var(--ink); margin-bottom: 5px; }
+  .sit p { margin: 0; font-size: 15pt; line-height: 1.48; }
+  .sit .q { color: var(--olive); font-family: "Bitstream Charter", "DejaVu Serif", serif; font-weight: bold; }
 
-  .glossary {
-    margin-top: 4px;
-    padding-top: 4px;
-  }
-  .glossary h4 { font-size: 12.5pt; color: var(--olive); margin-bottom: 6px; }
-  .gterms { display: flex; flex-wrap: wrap; gap: 5px 20px; }
-  .gterms div { width: calc(33.33% - 14px); font-size: 8.6pt; line-height: 1.36; }
-  .gterms b { color: var(--olive); font-family: "Bitstream Charter", "DejaVu Serif", serif; }
-
-
-  /* ---------- being a good member ---------- */
-  .member { margin-top: 13px; padding-top: 12px; border-top: 2.5px solid var(--olive); }
-  .mrow { display: flex; gap: 10px; }
-  .mcard {
-    flex: 1;
-    background: var(--khaki);
-    border-top: 3px solid var(--olive-lt);
-    padding: 9px 11px 10px 11px;
-  }
+  /* ---------- good member ---------- */
+  .mrow { display: flex; flex-direction: column; gap: 13px; }
+  .mcard { background: var(--khaki); border-left: 6px solid var(--olive-lt); padding: 15px 20px; }
   .mcard .mt {
     font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 10.6pt;
+    font-size: 19pt;
     font-weight: bold;
     color: var(--olive);
-    margin-bottom: 3px;
-    line-height: 1.2;
+    margin-bottom: 5px;
   }
-  .mcard .md { font-size: 8.5pt; line-height: 1.36; color: var(--ink); }
+  .mcard .md { font-size: 15pt; line-height: 1.45; }
 
-  /* ---------- practice (page 6) ---------- */
-  table.topics {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 9.6pt;
-    margin-top: 3px;
+  /* ---------- glossary ---------- */
+  .gterms { display: flex; flex-wrap: wrap; gap: 24px 30px; }
+  .gterms div { width: calc(50% - 15px); font-size: 15.5pt; line-height: 1.45; }
+  .gterms b { color: var(--olive); font-family: "Bitstream Charter", "DejaVu Serif", serif; font-size: 17pt; }
+
+  /* ---------- practice ---------- */
+  .roles { display: flex; flex-direction: column; gap: 11px; }
+  .role { display: flex; align-items: baseline; gap: 16px; border: 2px solid var(--khaki-dk); padding: 13px 18px; }
+  .role .rt {
+    flex: none;
+    width: 175px;
+    font-family: "Bitstream Charter", "DejaVu Serif", serif;
+    font-size: 18pt;
+    font-weight: bold;
+    color: var(--olive);
   }
+  .role .rd { flex: 1; font-size: 14pt; line-height: 1.42; color: var(--gray); }
+
+  table.topics { width: 100%; border-collapse: collapse; font-size: 14pt; }
   table.topics th {
     background: var(--olive);
     color: #fff;
     text-align: left;
-    padding: 7px 10px;
-    font-size: 8.2pt;
+    padding: 10px 14px;
+    font-size: 10pt;
     letter-spacing: 1.3px;
     text-transform: uppercase;
     font-weight: normal;
   }
-  table.topics td {
-    padding: 7px 10px;
-    border-bottom: 1px solid var(--khaki-dk);
-    vertical-align: top;
-    line-height: 1.4;
-  }
+  table.topics td { padding: 12px 14px; border-bottom: 1px solid var(--khaki-dk); vertical-align: top; line-height: 1.4; }
   table.topics tr:nth-child(even) td { background: #FAF7F0; }
-  table.topics td.tpc { width: 38%; font-weight: bold; color: var(--olive); }
-  table.topics td.mtn { font-family: "Bitstream Charter", "DejaVu Serif", serif; font-size: 10pt; }
+  table.topics td.tpc { width: 36%; font-weight: bold; color: var(--olive); }
+  table.topics td.mtn { font-family: "Bitstream Charter", "DejaVu Serif", serif; font-size: 15pt; }
 
-  .roles { display: flex; gap: 9px; margin-top: 4px; }
-  .role {
-    flex: 1;
-    border: 1.5px solid var(--khaki-dk);
-    padding: 9px 10px;
-    text-align: center;
-  }
-  .role .rt {
-    font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 10.6pt;
-    font-weight: bold;
-    color: var(--olive);
-    margin-bottom: 2px;
-  }
-  .role .rd { font-size: 8.4pt; color: var(--gray); line-height: 1.34; }
-
-  .checks { display: flex; flex-wrap: wrap; gap: 7px 20px; margin-top: 4px; }
-  .chk { width: calc(50% - 10px); display: flex; gap: 8px; align-items: flex-start; font-size: 9.6pt; line-height: 1.4; }
-  .chk .box {
-    flex: none;
-    width: 12px;
-    height: 12px;
-    border: 1.7px solid var(--olive);
-    margin-top: 2px;
-  }
-
-  .subhead {
-    font-family: "Bitstream Charter", "DejaVu Serif", serif;
-    font-size: 13pt;
-    font-weight: bold;
-    color: var(--olive);
-    margin: 17px 0 5px 0;
-    padding-bottom: 3px;
-    border-bottom: 1px solid var(--khaki-dk);
-  }
-  .subhead:first-of-type { margin-top: 0; }
+  .checks { display: flex; flex-direction: column; gap: 15px; }
+  .chk { display: flex; gap: 16px; align-items: flex-start; font-size: 15.5pt; line-height: 1.42; }
+  .chk .box { flex: none; width: 20px; height: 20px; border: 2.5px solid var(--olive); margin-top: 2px; }
 </style>
 </head>
 <body>
 
-<!-- ================= PAGE 1 ================= -->
+<!-- ============ 1. COVER ============ -->
 <section class="page cover">
   <div class="cover-band">
     <div class="cover-eyebrow">A Guide for Scouts</div>
@@ -515,7 +417,6 @@
     <div class="sub">How to Run a Meeting in Five Steps</div>
   </div>
   <div class="cover-rule"></div>
-
   <div class="cover-body">
     <div class="lede">
       <p>Parliamentary procedure is a shared set of rules that lets a group make decisions
@@ -527,67 +428,69 @@
       these same five steps. Learn them and you can lead a patrol or a troop through any
       decision it needs to make.</p>
     </div>
-
-    <div class="flowwrap">
-      <div class="flow">
-        <div class="step-chev">
-          <div class="n">1</div>
-          <div class="nm">Motion</div>
-          <div class="cap">Someone puts a specific idea on the table.</div>
-        </div>
-        <div class="arrow">&#9654;</div>
-        <div class="step-chev">
-          <div class="n">2</div>
-          <div class="nm">Second</div>
-          <div class="cap">Someone else agrees it is worth discussing.</div>
-        </div>
-        <div class="arrow">&#9654;</div>
-        <div class="step-chev">
-          <div class="n">3</div>
-          <div class="nm">Discussion</div>
-          <div class="cap">Everyone who wants to speak gets a turn.</div>
-        </div>
-        <div class="arrow">&#9654;</div>
-        <div class="step-chev">
-          <div class="n">4</div>
-          <div class="nm">Vote</div>
-          <div class="cap">The group answers aye or no.</div>
-        </div>
-        <div class="arrow">&#9654;</div>
-        <div class="step-chev">
-          <div class="n">5</div>
-          <div class="nm">Announce</div>
-          <div class="cap">The Chairperson says what the group decided.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="callout">
-      <span class="ct">The Chairperson runs the meeting &mdash; not the argument.</span>
-      The Scout in the chair has one job: guide the group through the five steps and give
-      every member a fair chance to be heard. A Chairperson who does that has run a good
-      meeting, no matter which way the vote goes.
-    </div>
-
     <div class="fillins">
-      <span><b>Troop</b> &nbsp;______________</span>
-      <span><b>Requirement</b> &nbsp;______________________</span>
-      <span><b>Meeting date</b> &nbsp;______________</span>
+      <b>Troop</b> &nbsp;__________________________________<br>
+      <b>Requirement</b> &nbsp;__________________________________<br>
+      <b>Meeting date</b> &nbsp;__________________________________
     </div>
   </div>
 </section>
 
-<!-- ================= PAGE 2 ================= -->
+<!-- ============ 2. AT A GLANCE ============ -->
 <section class="page">
   <div class="runhead">
     <div class="rh-title">The Five Steps</div>
-    <div class="rh-tag">Parliamentary Procedure</div>
+    <div class="rh-tag">At a glance</div>
   </div>
 
   <div class="kicker">Section 1</div>
-  <h2 class="sect">How a Motion Moves Through a Meeting</h2>
-  <p class="sect-note">Every decision a group makes travels the same path, in the same order,
-  every time.</p>
+  <h2 class="sect">Every Meeting Follows the Same Path</h2>
+  <p class="sect-note">In this order, every time.</p>
+
+  <div class="glance">
+    <div class="grow">
+      <div class="gn">1</div>
+      <div class="gt">Motion</div>
+      <div class="gc">Someone puts a specific idea on the table.</div>
+    </div>
+    <div class="grow">
+      <div class="gn">2</div>
+      <div class="gt">Second</div>
+      <div class="gc">Someone else agrees the idea is worth discussing.</div>
+    </div>
+    <div class="grow">
+      <div class="gn">3</div>
+      <div class="gt">Discussion</div>
+      <div class="gc">Everyone who wants to speak gets a turn.</div>
+    </div>
+    <div class="grow">
+      <div class="gn">4</div>
+      <div class="gt">Vote</div>
+      <div class="gc">The group answers aye or no.</div>
+    </div>
+    <div class="grow">
+      <div class="gn">5</div>
+      <div class="gt">Announce</div>
+      <div class="gc">The Chairperson says out loud what the group decided.</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <span class="ct">The Chairperson runs the meeting &mdash; not the argument.</span>
+    The Scout in the chair has one job: guide the group through the five steps and give every
+    member a fair chance to be heard. A Chairperson who does that has run a good meeting, no
+    matter which way the vote goes.
+  </div>
+
+  <div class="foot"><span>The Five Steps at a Glance</span><span>Page 2</span></div>
+</section>
+
+<!-- ============ 3. STEPS 1-2 ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Step by Step</div>
+    <div class="rh-tag">Step 1</div>
+  </div>
 
   <div class="step">
     <div class="badge">1</div>
@@ -597,52 +500,93 @@
       question the group can answer. The Chairperson opens the business by asking:</p>
       <div class="say"><span class="lbl">Chairperson</span>&ldquo;Is there a motion?&rdquo;</div>
       <p>Any member may make one, and a motion always begins with the words
-      <em>&ldquo;I move that&hellip;&rdquo;</em> &mdash; for example,
-      <em>&ldquo;I move that our next troop fundraiser be a pancake breakfast.&rdquo;</em>
-      Once a motion is on the floor, everyone knows exactly what is being decided. If a
-      group has been handed a suggested opening motion and nobody volunteers, the
-      Chairperson may ask a member to read it aloud to get things started.</p>
+      <em>&ldquo;I move that&hellip;&rdquo;</em> For example:</p>
+      <div class="say"><span class="lbl">Any member</span>&ldquo;I move that our next troop fundraiser be a pancake breakfast.&rdquo;</div>
+      <p>Once a motion is on the floor, everyone knows exactly what is being decided. If a
+      group has been handed a suggested opening motion and nobody volunteers, the Chairperson
+      may ask a member to read it aloud to get things started.</p>
     </div>
   </div>
 
-  <div class="step">
+  <div class="callout">
+    <span class="ct">Say &ldquo;I move that,&rdquo; not &ldquo;I think we should.&rdquo;</span>
+    The words matter. &ldquo;I think we should&rdquo; is an opinion, and the group can talk
+    around it all night. &ldquo;I move that&rdquo; tells everyone a decision is now on the
+    table and starts the five steps.
+  </div>
+
+  <div class="foot"><span>Step by Step</span><span>Page 3</span></div>
+</section>
+
+<!-- ============ STEP 2 ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Step by Step</div>
+    <div class="rh-tag">Step 2</div>
+  </div>
+
+  <div class="step last">
     <div class="badge">2</div>
     <div class="step-body">
       <h3>A Second</h3>
       <div class="say"><span class="lbl">Any member</span>&ldquo;I second the motion.&rdquo;</div>
-      <p>A second does <strong>not</strong> mean that Scout agrees with the motion. It means only
-      that they think the idea is worth the group&rsquo;s time to discuss. One person&rsquo;s
-      idea should not occupy the whole group unless at least one other person wants to talk
-      about it. If no one seconds, the motion dies and the group moves on.</p>
+      <p>A second does <strong>not</strong> mean that Scout agrees with the motion. It means
+      only that they think the idea is worth the group&rsquo;s time to discuss. One
+      person&rsquo;s idea should not occupy the whole group unless at least one other person
+      wants to talk about it. If no one seconds, the motion dies and the group moves on.</p>
     </div>
   </div>
 
-  <div class="step">
+  <div class="callout">
+    <span class="ct">Why require a second at all?</span>
+    It keeps the group from spending twenty minutes on an idea that only one person is
+    interested in. If not even one other Scout wants to discuss it, the group&rsquo;s time is
+    better spent elsewhere.
+  </div>
+
+  <div class="foot"><span>Step by Step</span><span>Page 4</span></div>
+</section>
+
+<!-- ============ 4. STEP 3 ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Step by Step</div>
+    <div class="rh-tag">Step 3</div>
+  </div>
+
+  <div class="step last">
     <div class="badge">3</div>
     <div class="step-body">
       <h3>Discussion</h3>
       <div class="say"><span class="lbl">Chairperson</span>&ldquo;The motion has been made and seconded. Is there any discussion?&rdquo;</div>
       <p>Now every member has a chance to speak. One Scout may think a pancake breakfast is a
       great idea. Another may argue that a spaghetti dinner would raise more money. A third
-      may want to change the motion. The Chairperson&rsquo;s job during discussion is to:</p>
+      may want to change the motion.</p>
+      <p>The Chairperson&rsquo;s job during discussion is to:</p>
       <ul class="tick">
         <li>Let one person speak at a time.</li>
         <li>Keep the discussion on the topic.</li>
         <li>Make sure everyone who wants to speak gets a chance.</li>
       </ul>
-      <p class="pull">The Chairperson is not there to win the argument. The Chairperson is there
-      to run a fair meeting.</p>
+      <p class="pull">The Chairperson is not there to win the argument. The Chairperson is
+      there to run a fair meeting.</p>
     </div>
   </div>
 
-  <div class="foot"><span>The Five Steps &mdash; Steps 1 to 3</span><span>Page 2</span></div>
+  <div class="callout">
+    <span class="ct">Discussion is where most of the meeting happens.</span>
+    Steps 1, 2, 4, and 5 are mostly words the Chairperson says. Step 3 is the part that takes
+    real skill: listening, calling on Scouts by name, and keeping order without taking sides.
+  </div>
+
+  <div class="foot"><span>Step by Step</span><span>Page 5</span></div>
 </section>
 
-<!-- ================= PAGE 3 ================= -->
+<!-- ============ 5. STEPS 4-5 ============ -->
 <section class="page">
   <div class="runhead">
-    <div class="rh-title">The Five Steps</div>
-    <div class="rh-tag">Continued</div>
+    <div class="rh-title">Step by Step</div>
+    <div class="rh-tag">Step 4</div>
   </div>
 
   <div class="step">
@@ -653,62 +597,112 @@
       <strong>restates the motion</strong>, so that nobody votes on something they have lost
       track of.</p>
       <div class="say"><span class="lbl">Chairperson</span>&ldquo;The motion before us is that our next troop fundraiser be a pancake breakfast. All those in favor, say aye.&rdquo; &hellip; &ldquo;All those opposed, say no.&rdquo;</div>
-      <p>Members vote by voice, or by raised hand when the Chairperson needs an exact count.
-      A motion passes when more than half of those voting are in favor.</p>
+      <p>Members vote by voice, or by raised hand when the Chairperson needs an exact count. A
+      motion passes when more than half of those voting are in favor.</p>
     </div>
   </div>
 
-  <div class="step">
+  <div class="callout">
+    <span class="ct">Count the hands when it sounds close.</span>
+    A voice vote is quick, but if the ayes and the noes sound about even, ask for raised hands
+    and count them. An exact count settles any doubt about the result.
+  </div>
+
+  <div class="foot"><span>Step by Step</span><span>Page 6</span></div>
+</section>
+
+<!-- ============ STEP 5 ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Step by Step</div>
+    <div class="rh-tag">Step 5</div>
+  </div>
+
+  <div class="step last">
     <div class="badge">5</div>
     <div class="step-body">
       <h3>Announce the Result</h3>
-      <p>A vote is not final until the Chairperson says so out loud:
-      <em>&ldquo;The motion passes.&rdquo;</em> or <em>&ldquo;The motion fails.&rdquo;</em>
-      Announcing the result leaves no doubt about what the group decided. The Chairperson
-      then moves to the next item of business, or closes the meeting:
-      <em>&ldquo;This meeting is adjourned.&rdquo;</em></p>
+      <p>A vote is not final until the Chairperson says so out loud:</p>
+      <div class="say"><span class="lbl">Chairperson</span>&ldquo;The motion passes.&rdquo; &nbsp;or&nbsp; &ldquo;The motion fails.&rdquo;</div>
+      <p>Announcing the result leaves no doubt about what the group decided. From here the
+      Chairperson does one of two things &mdash; moves the group to the next decision:</p>
+      <div class="say"><span class="lbl">Chairperson &mdash; moving on</span>&ldquo;The next item of business is&hellip;&rdquo;</div>
+      <p>or closes the meeting:</p>
+      <div class="say"><span class="lbl">Chairperson &mdash; closing the meeting</span>&ldquo;This meeting is adjourned.&rdquo;</div>
     </div>
   </div>
 
-  <div class="dialogwrap">
-    <div class="kicker" style="margin-top:20px;">All five steps together</div>
-    <h2 class="sect" style="font-size:18pt;">What It Sounds Like</h2>
-    <p class="sect-note">One motion, start to finish. The numbers on the right mark which step
-    the meeting is on.</p>
-
-    <div class="dialog">
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;This meeting will come to order. The topic before us is choosing the troop&rsquo;s next fundraiser. Is there a motion?&rdquo;</div><div class="mark">1</div></div>
-      <div class="dl"><div class="who">Alex</div><div class="says">&ldquo;I move that our next troop fundraiser be a pancake breakfast.&rdquo;</div><div class="mark">1</div></div>
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;Thank you. Is there a second?&rdquo;</div><div class="mark">2</div></div>
-      <div class="dl"><div class="who">Jordan</div><div class="says">&ldquo;I second the motion.&rdquo;</div><div class="mark">2</div></div>
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;The motion has been made and seconded. Is there any discussion?&rdquo;</div><div class="mark">3</div></div>
-      <div class="dl"><div class="who">Sam</div><div class="says">&ldquo;A pancake breakfast is easy to run, and we already know how to cook one.&rdquo;</div><div class="mark">3</div></div>
-      <div class="dl"><div class="who">Riley</div><div class="says">&ldquo;I think a spaghetti dinner would raise more money&mdash;&rdquo;</div><div class="mark">3</div></div>
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;One at a time, please. Riley has the floor. &hellip; Thank you, Riley. Does anyone who has not spoken want to add anything?&rdquo;</div><div class="mark">3</div></div>
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;Is there any further discussion? &hellip; The motion before us is that our next troop fundraiser be a pancake breakfast. All those in favor, say aye.&rdquo;</div><div class="mark">4</div></div>
-      <div class="dl"><div class="who">Members</div><div class="says">&ldquo;Aye.&rdquo;</div><div class="mark">4</div></div>
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;All those opposed, say no.&rdquo;</div><div class="mark">4</div></div>
-      <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;The motion passes, nine in favor and three opposed. Our next fundraiser will be a pancake breakfast. The next item of business is choosing a date.&rdquo;</div><div class="mark">5</div></div>
-    </div>
+  <div class="callout">
+    <span class="ct">Someone should write it down.</span>
+    Whoever is keeping notes records the motion and the result. At the next meeting nobody has
+    to rely on memory to know what the group decided.
   </div>
 
-  <div class="foot"><span>The Five Steps &mdash; Steps 4 and 5</span><span>Page 3</span></div>
+  <div class="foot"><span>Step by Step</span><span>Page 7</span></div>
 </section>
 
-<!-- ================= PAGE 4 ================= -->
+<!-- ============ 6. DIALOGUE A ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">What It Sounds Like</div>
+    <div class="rh-tag">One motion, start to finish</div>
+  </div>
+
+  <div class="kicker">Section 2</div>
+  <h2 class="sect sm">All Five Steps Together</h2>
+  <p class="sect-note">The number beside each line marks which step the meeting is on.</p>
+
+  <div class="dialog">
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;This meeting will come to order. The topic before us is choosing the troop&rsquo;s next fundraiser. Is there a motion?&rdquo;</div><div class="mark">1</div></div>
+    <div class="dl"><div class="who">Alex</div><div class="says">&ldquo;I move that our next troop fundraiser be a pancake breakfast.&rdquo;</div><div class="mark">1</div></div>
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;Thank you. Is there a second?&rdquo;</div><div class="mark">2</div></div>
+    <div class="dl"><div class="who">Jordan</div><div class="says">&ldquo;I second the motion.&rdquo;</div><div class="mark">2</div></div>
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;The motion has been made and seconded. Is there any discussion?&rdquo;</div><div class="mark">3</div></div>
+    <div class="dl"><div class="who">Sam</div><div class="says">&ldquo;A pancake breakfast is easy to run, and we already know how to cook one.&rdquo;</div><div class="mark">3</div></div>
+    <div class="dl"><div class="who">Riley</div><div class="says">&ldquo;I think a spaghetti dinner would raise more money&mdash;&rdquo;</div><div class="mark">3</div></div>
+  </div>
+
+  <div class="foot"><span>What It Sounds Like</span><span>Page 8</span></div>
+</section>
+
+<!-- ============ 7. DIALOGUE B ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">What It Sounds Like</div>
+    <div class="rh-tag">Continued</div>
+  </div>
+
+  <div class="dialog" style="margin-top:0;">
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;One at a time, please. Riley has the floor. &hellip; Thank you, Riley. Does anyone who has not spoken want to add anything?&rdquo;</div><div class="mark">3</div></div>
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;Is there any further discussion? &hellip; The motion before us is that our next troop fundraiser be a pancake breakfast. All those in favor, say aye.&rdquo;</div><div class="mark">4</div></div>
+    <div class="dl"><div class="who">Members</div><div class="says">&ldquo;Aye.&rdquo;</div><div class="mark">4</div></div>
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;All those opposed, say no.&rdquo;</div><div class="mark">4</div></div>
+    <div class="dl"><div class="who">Chair</div><div class="says">&ldquo;The motion passes, nine in favor and three opposed. Our next fundraiser will be a pancake breakfast. The next item of business is choosing a date.&rdquo;</div><div class="mark">5</div></div>
+  </div>
+
+  <div class="callout">
+    <span class="ct">Notice what the Chairperson never does.</span>
+    The chair never says which fundraiser is better. Every line is either a question to the
+    group, a call for order, or an announcement of what the group decided.
+  </div>
+
+  <div class="foot"><span>What It Sounds Like</span><span>Page 9</span></div>
+</section>
+
+<!-- ============ 8. SCRIPT CARD A ============ -->
 <section class="page">
   <div class="runhead">
     <div class="rh-title">Chairperson&rsquo;s Script Card</div>
-    <div class="rh-tag">Say these lines in order</div>
+    <div class="rh-tag">Lines 1 to 3</div>
   </div>
 
   <div class="cardframe">
     <div class="cf-head">
       <div class="t">What the Chairperson Says</div>
-      <div class="s">Read the bold words out loud. Fill the blanks with your group&rsquo;s topic and motion.</div>
+      <div class="s">Read the bold words out loud. Fill the blanks with your group&rsquo;s topic
+      and motion.</div>
     </div>
     <div class="cf-body">
-
       <div class="line">
         <div class="ln">1</div>
         <div class="lc">
@@ -718,29 +712,45 @@
           <div class="stage">A member responds: &ldquo;I move that &hellip;&rdquo;</div>
         </div>
       </div>
-
       <div class="line">
         <div class="ln">2</div>
         <div class="lc">
           <div class="lname">Call for a second</div>
           <div class="quote">&ldquo;Thank you. Is there a second?&rdquo;</div>
-          <div class="stage">Another member responds: &ldquo;I second the motion.&rdquo;
-          If no one does, see <em>If nobody seconds the motion</em> in Section 3.</div>
+          <div class="stage">Another member responds: &ldquo;I second the motion.&rdquo; If no
+          one does, see <em>If nobody seconds the motion</em> in Section 4.</div>
         </div>
       </div>
-
       <div class="line">
         <div class="ln">3</div>
         <div class="lc">
           <div class="lname">Open discussion</div>
           <div class="quote">&ldquo;The motion has been made and seconded. Is there any
           discussion?&rdquo;</div>
-          <div class="stage">One at a time &middot; stay on the topic &middot; everyone who wants
-          to speak, speaks. Call on Scouts by name: &ldquo;<span class="blank blank-s"></span>,
-          you have the floor.&rdquo;</div>
+          <div class="stage">One at a time &middot; stay on the topic &middot; everyone who
+          wants to speak, speaks. Call on Scouts by name:
+          &ldquo;<span class="blank blank-s"></span>, you have the floor.&rdquo;</div>
         </div>
       </div>
+    </div>
+  </div>
 
+  <div class="foot"><span>Chairperson&rsquo;s Script Card</span><span>Page 10</span></div>
+</section>
+
+<!-- ============ 9. SCRIPT CARD B ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Chairperson&rsquo;s Script Card</div>
+    <div class="rh-tag">Lines 4 and 5</div>
+  </div>
+
+  <div class="cardframe">
+    <div class="cf-head">
+      <div class="t">What the Chairperson Says</div>
+      <div class="s">Continued from the previous page.</div>
+    </div>
+    <div class="cf-body">
       <div class="line">
         <div class="ln">4</div>
         <div class="lc">
@@ -750,151 +760,177 @@
           opposed, say no.&rdquo;</div>
         </div>
       </div>
-
       <div class="line">
         <div class="ln">5</div>
         <div class="lc">
           <div class="lname">Announce the result</div>
           <div class="quote">&ldquo;The motion <em>passes</em> / <em>fails</em> &mdash;
-          <span class="blank blank-s"></span> in favor, <span class="blank blank-s"></span>
-          opposed.&rdquo;</div>
+          <span class="blank blank-s"></span> in favor,
+          <span class="blank blank-s"></span> opposed.&rdquo;</div>
           <div class="stage">Then either move to the next topic &mdash; &ldquo;The next item of
-          business is <span class="blank blank-s"></span>&rdquo; &mdash; or close:
+          business is <span class="blank blank-s"></span>&rdquo; &mdash; or close the meeting:
           &ldquo;This meeting is adjourned.&rdquo;</div>
         </div>
       </div>
-
+      <div class="line">
+        <div class="ln" style="border-color:#4E6B4A; color:#4E6B4A;">&#10003;</div>
+        <div class="lc">
+          <div class="lname">Practice tip</div>
+          <div class="quote" style="font-size:16.5pt; font-weight:normal; color:#1E241F;">Read
+          this card out loud once or twice before the meeting. Knowing the five opening lines
+          by heart is most of the job. The rest is listening and keeping order.</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="callout" style="margin-top:16px;">
-    <span class="ct">Practice tip</span>
-    Read this card out loud once or twice before the meeting. Knowing the five opening lines
-    by heart is most of the job &mdash; the rest is listening and keeping order.
-  </div>
-
-  <div class="foot"><span>Chairperson&rsquo;s Script Card</span><span>Page 4</span></div>
+  <div class="foot"><span>Chairperson&rsquo;s Script Card</span><span>Page 11</span></div>
 </section>
 
-<!-- ================= PAGE 5 ================= -->
+<!-- ============ 10. THREE RULES ============ -->
 <section class="page">
   <div class="runhead">
     <div class="rh-title">Running It Well</div>
-    <div class="rh-tag">The chair&rsquo;s job &amp; tricky moments</div>
+    <div class="rh-tag">The chair&rsquo;s job</div>
   </div>
 
-  <div class="cols">
-    <div class="col-l">
-      <div class="kicker">Section 2</div>
-      <h2 class="sect" style="font-size:18pt;">The Chairperson&rsquo;s Three Rules</h2>
-      <p class="sect-note" style="margin-bottom:12px;">Everything a Chairperson does comes back
-      to these.</p>
+  <div class="kicker">Section 3</div>
+  <h2 class="sect">The Chairperson&rsquo;s Three Rules</h2>
+  <p class="sect-note">Everything a Chairperson does comes back to these three.</p>
 
-      <div class="jobcard">
-        <h4><span class="num">1</span>One at a time</h4>
-        <p>Only the Scout who has the floor speaks. Everyone else waits their turn, including
-        the Chairperson.</p>
-      </div>
-      <div class="jobcard">
-        <h4><span class="num">2</span>Stay on the topic</h4>
-        <p>Discussion sticks to the motion in front of the group. Other good ideas wait for
-        their own motion.</p>
-      </div>
-      <div class="jobcard">
-        <h4><span class="num">3</span>Everyone gets a chance</h4>
-        <p>Before calling for a vote, look around and ask whether anyone who has not spoken
-        would like to.</p>
-      </div>
-    </div>
-
-    <div class="col-r">
-      <div class="kicker">Section 3</div>
-      <h2 class="sect" style="font-size:18pt;">When Something Unexpected Happens</h2>
-      <p class="sect-note" style="margin-bottom:12px;">Four situations that come up in almost
-      every meeting.</p>
-
-      <div class="sit">
-        <h4>If nobody seconds the motion</h4>
-        <p>Say: <span class="q">&ldquo;Hearing no second, the motion dies.&rdquo;</span>
-        Then ask whether anyone would like to make a different motion, or move to the next
-        topic.</p>
-      </div>
-
-      <div class="sit">
-        <h4>If two Scouts start talking at once</h4>
-        <p>Say: <span class="q">&ldquo;One at a time, please. ______, you have the floor.&rdquo;</span>
-        Then call on the other Scout next, so nobody loses their turn.</p>
-      </div>
-
-      <div class="sit">
-        <h4>If someone wants to change the motion</h4>
-        <p>They say: <span class="q">&ldquo;I move to amend the motion to ______.&rdquo;</span>
-        An amendment needs its own second, its own short discussion, and its own vote. If the
-        amendment passes, the group then votes on the motion as amended.</p>
-      </div>
-
-      <div class="sit" style="margin-bottom:0;">
-        <h4>If the vote is a tie</h4>
-        <p>A tie means the motion <strong>fails</strong>, because it did not get more than half
-        the votes. The Chairperson normally stays out of the voting, but may vote to break a
-        tie.</p>
-      </div>
-    </div>
+  <div class="jobcard">
+    <h4><span class="num">1</span>One at a time</h4>
+    <p>Only the Scout who has the floor speaks. Everyone else waits their turn, including the
+    Chairperson.</p>
+  </div>
+  <div class="jobcard">
+    <h4><span class="num">2</span>Stay on the topic</h4>
+    <p>Discussion sticks to the motion in front of the group. Other good ideas wait for their
+    own motion.</p>
+  </div>
+  <div class="jobcard">
+    <h4><span class="num">3</span>Everyone gets a chance</h4>
+    <p>Before calling for a vote, look around the group and ask whether anyone who has not
+    spoken would like to.</p>
   </div>
 
-  <div class="member">
-    <div class="kicker">Section 4</div>
-    <h2 class="sect" style="font-size:18pt;">Being a Good Member</h2>
-    <p class="sect-note" style="margin-bottom:10px;">A meeting only works if the Scouts who are
-    not in the chair do their part too.</p>
-    <div class="mrow">
-      <div class="mcard">
-        <div class="mt">Wait to be recognized</div>
-        <div class="md">Raise your hand and let the Chairperson call on you before you speak.</div>
-      </div>
-      <div class="mcard">
-        <div class="mt">Speak to the motion</div>
-        <div class="md">Argue about the idea in front of the group, never about the Scout who
-        proposed it.</div>
-      </div>
-      <div class="mcard">
-        <div class="mt">Keep it short</div>
-        <div class="md">Make your point once and clearly, so there is time for everyone else.</div>
-      </div>
-      <div class="mcard">
-        <div class="mt">Back the decision</div>
-        <div class="md">Once the vote is announced, it is the group&rsquo;s decision &mdash; even
-        if you voted no.</div>
-      </div>
-    </div>
+  <div class="callout">
+    <span class="ct">A fair meeting beats a fast meeting.</span>
+    If the choice is between finishing quickly and letting one more Scout be heard, let the
+    Scout be heard.
   </div>
 
-  <div class="glossary" style="margin-top:13px;">
-    <h4>Words You Will Hear</h4>
-    <div class="gterms">
-      <div><b>Motion</b> &mdash; a formal proposal, always beginning &ldquo;I move that&hellip;&rdquo;</div>
-      <div><b>Second</b> &mdash; one other member saying the motion is worth discussing.</div>
-      <div><b>The floor</b> &mdash; permission to speak. Only one Scout has it at a time.</div>
-      <div><b>Amend</b> &mdash; to change the wording of a motion before voting on it.</div>
-      <div><b>Majority</b> &mdash; more than half of those voting. What a motion needs to pass.</div>
-      <div><b>Adjourn</b> &mdash; to formally end the meeting.</div>
-      <div><b>Aye / No</b> &mdash; the words members say when voting by voice.</div>
-      <div><b>The chair</b> &mdash; another name for the Chairperson running the meeting.</div>
-      <div><b>Dies</b> &mdash; what happens to a motion that never gets a second.</div>
-    </div>
-  </div>
-
-  <div class="foot"><span>Running It Well</span><span>Page 5</span></div>
+  <div class="foot"><span>Running It Well</span><span>Page 12</span></div>
 </section>
 
-<!-- ================= PAGE 6 ================= -->
+<!-- ============ 11. SITUATIONS ============ -->
 <section class="page">
   <div class="runhead">
-    <div class="rh-title">Practicing the Five Steps</div>
-    <div class="rh-tag">What to expect at the meeting</div>
+    <div class="rh-title">Running It Well</div>
+    <div class="rh-tag">Tricky moments</div>
+  </div>
+
+  <div class="kicker">Section 4</div>
+  <h2 class="sect">When Something Unexpected Happens</h2>
+  <p class="sect-note">Four situations that come up in almost every meeting.</p>
+
+  <div class="sit">
+    <h4>If nobody seconds the motion</h4>
+    <p>Say: <span class="q">&ldquo;Hearing no second, the motion dies.&rdquo;</span> Then ask
+    whether anyone would like to make a different motion, or move on to the next topic.</p>
+  </div>
+  <div class="sit">
+    <h4>If two Scouts start talking at once</h4>
+    <p>Say: <span class="q">&ldquo;One at a time, please. ______, you have the floor.&rdquo;</span>
+    Then call on the other Scout next, so nobody loses their turn.</p>
+  </div>
+  <div class="sit">
+    <h4>If someone wants to change the motion</h4>
+    <p>They say: <span class="q">&ldquo;I move to amend the motion to ______.&rdquo;</span> An
+    amendment needs its own second, its own short discussion, and its own vote. If the
+    amendment passes, the group then votes on the motion as amended.</p>
+  </div>
+  <div class="sit">
+    <h4>If the vote is a tie</h4>
+    <p>A tie means the motion <strong>fails</strong>, because it did not get more than half the
+    votes. The Chairperson normally stays out of the voting, but may vote to break a tie.</p>
+  </div>
+
+  <div class="foot"><span>Running It Well</span><span>Page 13</span></div>
+</section>
+
+<!-- ============ 12. GOOD MEMBER ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Running It Well</div>
+    <div class="rh-tag">Your part as a member</div>
   </div>
 
   <div class="kicker">Section 5</div>
+  <h2 class="sect">Being a Good Member</h2>
+  <p class="sect-note">A meeting only works if the Scouts who are not in the chair do their
+  part too.</p>
+
+  <div class="mrow">
+    <div class="mcard">
+      <div class="mt">Wait to be recognized</div>
+      <div class="md">Raise your hand and let the Chairperson call on you before you speak.</div>
+    </div>
+    <div class="mcard">
+      <div class="mt">Speak to the motion</div>
+      <div class="md">Argue about the idea in front of the group, never about the Scout who
+      proposed it.</div>
+    </div>
+    <div class="mcard">
+      <div class="mt">Keep it short</div>
+      <div class="md">Make your point once and clearly, so there is time for everyone else to
+      be heard.</div>
+    </div>
+    <div class="mcard">
+      <div class="mt">Back the decision</div>
+      <div class="md">Once the vote is announced, it is the group&rsquo;s decision &mdash; even
+      if you voted no.</div>
+    </div>
+  </div>
+
+  <div class="foot"><span>Running It Well</span><span>Page 14</span></div>
+</section>
+
+<!-- ============ 13. GLOSSARY ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Words You Will Hear</div>
+    <div class="rh-tag">Glossary</div>
+  </div>
+
+  <div class="kicker">Section 6</div>
+  <h2 class="sect">The Language of a Meeting</h2>
+  <p class="sect-note">Nine terms cover almost everything said in a basic meeting.</p>
+
+  <div class="gterms">
+    <div><b>Motion</b><br>A formal proposal, always beginning with the words &ldquo;I move
+    that&hellip;&rdquo;</div>
+    <div><b>Second</b><br>One other member saying the motion is worth discussing.</div>
+    <div><b>The floor</b><br>Permission to speak. Only one Scout has it at a time.</div>
+    <div><b>Amend</b><br>To change the wording of a motion before voting on it.</div>
+    <div><b>Majority</b><br>More than half of those voting. What a motion needs to pass.</div>
+    <div><b>Adjourn</b><br>To formally end the meeting.</div>
+    <div><b>Aye / No</b><br>The words members say when voting by voice.</div>
+    <div><b>The chair</b><br>Another name for the Chairperson running the meeting.</div>
+    <div><b>Dies</b><br>What happens to a motion that never gets a second.</div>
+  </div>
+
+  <div class="foot"><span>Words You Will Hear</span><span>Page 15</span></div>
+</section>
+
+<!-- ============ 14. PRACTICE ROUND ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Practicing the Five Steps</div>
+    <div class="rh-tag">What to expect</div>
+  </div>
+
+  <div class="kicker">Section 7</div>
   <h2 class="sect">How the Practice Round Works</h2>
   <p class="sect-note">Each group receives a discussion topic and a suggested opening motion,
   chooses who fills each role, and then runs the topic through all five steps. Groups may run
@@ -907,11 +943,11 @@
     </div>
     <div class="role">
       <div class="rt">Motion Maker</div>
-      <div class="rd">Makes the opening motion when the chair asks.</div>
+      <div class="rd">Makes the opening motion when the chair asks for one.</div>
     </div>
     <div class="role">
       <div class="rt">Seconder</div>
-      <div class="rd">Seconds the motion so discussion can begin.</div>
+      <div class="rd">Seconds the motion so that discussion can begin.</div>
     </div>
     <div class="role">
       <div class="rt">Members</div>
@@ -919,12 +955,28 @@
     </div>
   </div>
 
-  <div class="subhead" style="margin-top:18px;">Sample Topics and Opening Motions</div>
+  <div class="callout">
+    <span class="ct">Come ready to take the chair.</span>
+    Any Scout in the group may be asked to run a round, so read the Script Card on pages 10
+    and 11 before the meeting.
+  </div>
+
+  <div class="foot"><span>Practicing the Five Steps</span><span>Page 16</span></div>
+</section>
+
+<!-- ============ 15. TOPICS ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Practicing the Five Steps</div>
+    <div class="rh-tag">Sample topics</div>
+  </div>
+
+  <div class="kicker">Section 7</div>
+  <h2 class="sect sm">Sample Topics and Opening Motions</h2>
+  <p class="sect-note">A group may be given one of these, or a topic of its own.</p>
+
   <table class="topics">
-    <tr>
-      <th>Discussion Topic</th>
-      <th>Suggested Opening Motion</th>
-    </tr>
+    <tr><th>Discussion Topic</th><th>Suggested Opening Motion</th></tr>
     <tr>
       <td class="tpc">Choose the troop&rsquo;s next fundraiser</td>
       <td class="mtn">&ldquo;I move that our next troop fundraiser be a pancake breakfast.&rdquo;</td>
@@ -947,17 +999,30 @@
     </tr>
   </table>
 
-  <div class="subhead">Check Your Meeting</div>
+  <div class="foot"><span>Practicing the Five Steps</span><span>Page 17</span></div>
+</section>
+
+<!-- ============ 16. CHECK YOUR MEETING ============ -->
+<section class="page">
+  <div class="runhead">
+    <div class="rh-title">Check Your Meeting</div>
+    <div class="rh-tag">After each round</div>
+  </div>
+
+  <div class="kicker">Section 8</div>
+  <h2 class="sect">Did the Group Do All Six?</h2>
+  <p class="sect-note">Run through this list after each practice round.</p>
+
   <div class="checks">
     <div class="chk"><div class="box"></div><div>All five steps happened, in order.</div></div>
-    <div class="chk"><div class="box"></div><div>The motion was clearly stated before discussion.</div></div>
+    <div class="chk"><div class="box"></div><div>The motion was clearly stated before discussion began.</div></div>
     <div class="chk"><div class="box"></div><div>Only one Scout spoke at a time.</div></div>
     <div class="chk"><div class="box"></div><div>Everyone who wanted to speak got a chance.</div></div>
     <div class="chk"><div class="box"></div><div>The motion was restated before the vote.</div></div>
     <div class="chk"><div class="box"></div><div>The Chairperson announced the result out loud.</div></div>
   </div>
 
-  <div class="callout" style="margin-top:20px;">
+  <div class="callout">
     <span class="ct">Remember what you are practicing.</span>
     The goal is not to pick the best fundraiser or the best campout. The goal is to practice
     running a meeting. If the Chairperson can guide the group through all five steps while
@@ -965,7 +1030,7 @@
     requirement asks.
   </div>
 
-  <div class="foot"><span>Practicing the Five Steps</span><span>Page 6</span></div>
+  <div class="foot"><span>Check Your Meeting</span><span>Page 18</span></div>
 </section>
 
 </body>
