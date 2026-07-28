@@ -116,13 +116,26 @@
 
   .fillins {
     margin-top: auto;
-    padding-top: 18px;
-    border-top: 1px solid var(--khaki-dk);
-    font-size: 13.5pt;
-    color: var(--gray);
-    line-height: 2.1;
+    padding-top: 20px;
+    border-top: 3px solid var(--olive);
+    display: flex;
+    gap: 34px;
   }
-  .fillins b { color: var(--ink); font-weight: normal; }
+  .fillins .fi { flex: none; }
+  .fillins .fl {
+    font-size: 9.5pt;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 5px;
+  }
+  .fillins .fv {
+    font-family: "Bitstream Charter", "DejaVu Serif", serif;
+    font-size: 17pt;
+    font-weight: bold;
+    color: var(--olive);
+    line-height: 1.2;
+  }
 
   /* ---------- section headings ---------- */
   .kicker {
@@ -429,9 +442,18 @@
       decision it needs to make.</p>
     </div>
     <div class="fillins">
-      <b>Troop</b> &nbsp;__________________________________<br>
-      <b>Requirement</b> &nbsp;__________________________________<br>
-      <b>Meeting date</b> &nbsp;__________________________________
+      <div class="fi">
+        <div class="fl">Troop</div>
+        <div class="fv">Troop 700</div>
+      </div>
+      <div class="fi">
+        <div class="fl">Requirement</div>
+        <div class="fv">Public Speaking Merit Badge</div>
+      </div>
+      <div class="fi">
+        <div class="fl">Meeting date</div>
+        <div class="fv">July 27, 2026</div>
+      </div>
     </div>
   </div>
 </section>
